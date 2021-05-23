@@ -1,0 +1,14 @@
+<apex:page StandardController="Lead" extensions="GenerateLeadPDFExt" showHeader="false" applyHtmlTag="false" applyBodyTag="false" renderAs="pdf" >
+    <html>
+        <head>
+            <style>
+                body {font-family:sans-serif;font-size:12px;}
+                table {width:100%;border-collapse:collapse;}
+                table tr td {border:1px solid #999;padding:4px;}
+                div.bPageFooter,div.bHeader,div.pbHeaderEmpty,div.printHeader, a.navSkipLink {display: none;}
+                .labelCol{font-weight: bold;}
+            </style>
+        </head>
+        <apex:outputText value="{!PrintableView}" escape="false" />
+    </html>
+</apex:page>
